@@ -1,4 +1,4 @@
-const { check, runTest, skipTest } = require("../test-api/index.js");
+const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 // cat and mouse positions with multiple mice, how many would the cat catch
 

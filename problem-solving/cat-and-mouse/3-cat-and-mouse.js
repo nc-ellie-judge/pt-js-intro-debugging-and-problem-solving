@@ -1,4 +1,4 @@
-const { check, runTest, skipTest } = require("../test-api/index.js");
+const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 // cat move and mouse move, place to hide
 
