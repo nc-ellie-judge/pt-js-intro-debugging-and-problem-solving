@@ -1,12 +1,8 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
-// cat and mouse positions with multiple mice, how many would the cat catch
-
-// cat move and mouse move, place to hide
-
 function calculateJump(locations, jumpLength) {
-  /*
-You will be given an array containing string representations of the locations of a cat and a mouse. The array may also contains walls represented by "W".
+/*
+You will be given an array containing string representations of the locations of a cat and a mouse. The array may also contain walls represented by "W".
 You will also be given a positive integer which represents how far the cat can jump.
 
 Your task is to calculate if the cat can jump far enough to catch the mouse. 

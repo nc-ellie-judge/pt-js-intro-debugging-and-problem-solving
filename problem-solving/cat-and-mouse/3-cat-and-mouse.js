@@ -1,9 +1,7 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
-// cat move and mouse move, place to hide
-
 function calculateJump(locations, catJumpLength, mouseRunLength) {
-  /*
+/*
 You will be given an array containing string representations of the locations of a cat and multiple mice. Hiding holes for mice are represented by "O".
 You will also be given one positive integer which represents how far the cat can jump, and a second one representing how far the mouse can move.
 
