@@ -1,7 +1,7 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 function calculateJump(locations, jumpLength) {
-  /*
+/*
 You will be given an array containing string representations of the locations of a cat and a mouse. 
 You will also be given a positive integer which represents how far the cat can jump.
 
