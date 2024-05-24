@@ -2,7 +2,7 @@ const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 // Fix the function below to pass the test!
 
-function highFlyers(superheroes) {
+function findKnownFlyers(superheroes) {
   const knownFlyers = [];
 
   for (let i = 0; i < superheroes.length; i++) {
@@ -15,7 +15,7 @@ function highFlyers(superheroes) {
 
 // Please do not change code below this line. You do not need to alter the tests or the test suite.
 
-runTest("Get highFlyers to return all known flyers", function () {
+runTest("Get findKnownFlyers to return all known flyers", function () {
   const heroes = [
     { name: "Spiderman", ability: "spidey-sense", isAnonymous: true },
     { name: "Superman", ability: "flying", isAnonymous: true },
@@ -24,7 +24,7 @@ runTest("Get highFlyers to return all known flyers", function () {
     { name: "Wonderwoman", ability: "flying", isAnonymous: false },
     { name: "Shazam", ability: "flying", isAnonymous: true },
   ];
-  check(highFlyers(heroes)).isEqualTo([
+  check(findKnownFlyers(heroes)).isEqualTo([
     { name: "Ironman", ability: "flying", isAnonymous: false },
     { name: "Wonderwoman", ability: "flying", isAnonymous: false },
   ]);

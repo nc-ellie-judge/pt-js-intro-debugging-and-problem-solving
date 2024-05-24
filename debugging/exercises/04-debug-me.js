@@ -2,7 +2,7 @@ const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 // Fix the function below to pass the test!
 
-function accessObject(mentor) {
+function findMentorsFavouritePlant(mentor) {
   const plants = {
     Rob: "Money Plant",
     Hannah: "Sunflower",
@@ -15,8 +15,8 @@ function accessObject(mentor) {
 // Please do not change code below this line. You do not need to alter the tests or the test suite.
 
 runTest("Return the plant of the passed mentor", function () {
-  check(accessObject("Lewis")).isEqualTo("Cactus");
-  check(accessObject("Rob")).isEqualTo("Money Plant");
-  check(accessObject("Hannah")).isEqualTo("Sunflower");
-  check(accessObject("Harrison")).isEqualTo("Venus Fly Trap");
+  check(findMentorsFavouritePlant("Lewis")).isEqualTo("Cactus");
+  check(findMentorsFavouritePlant("Rob")).isEqualTo("Money Plant");
+  check(findMentorsFavouritePlant("Hannah")).isEqualTo("Sunflower");
+  check(findMentorsFavouritePlant("Harrison")).isEqualTo("Venus Fly Trap");
 });

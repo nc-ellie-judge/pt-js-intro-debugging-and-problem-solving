@@ -1,17 +1,17 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
-// The returnHighest function will take an array of objects and an integer as arguments. First, the function will sort the array based on the score properties in descending order. The function will then calculate how many objects will be returned in a new array, based on how many times num fits into the length of the initial array of objects argument.
+// The findHighestScoring function will take an array of objects and an integer as arguments. First, the function will sort the array based on the score properties in descending order. The function will then calculate how many objects will be returned in a new array, based on how many times num fits into the length of the initial array of objects argument.
 
 //(e.g. When num is 4, num goes into the length of the input object (15) 3 times, so the function should return the 3 highest scoring objects).
 
-/*For example returnHighest([
+/*For example findHighestScoring([
   { score: 100, country: "England" },
   { score: 0, country: "Scotland" },
   { score: 30, country: "Italy" },
   { score: 40, country: "France" }], 2)
   Would return [{ score: 100, country: "England" },{ score: 40, country: "France" }]
 
-returnHighest([
+findHighestScoring([
   { score: 100, country: "England" },
   { score: 35, country: "Scotland" },
   { score: 30, country: "Italy" },
@@ -21,7 +21,7 @@ returnHighest([
 
 //It is your job to fix it.
 
-function returnHighest(array, num) {
+function findHighestScoring(array, num) {
   if (num === 0) {
     return [];
   }
@@ -45,16 +45,16 @@ function returnHighest(array, num) {
 // Please do not change code below this line. You do not need to alter the tests or the test suite.
 
 runTest('Returns empty array if num is 0"', function () {
-  check(returnHighest([{ score: 100, country: "England" }], 0)).isEqualTo([]);
+  check(findHighestScoring([{ score: 100, country: "England" }], 0)).isEqualTo([]);
 });
 runTest('Returns empty array if array length is less than num"', function () {
-  check(returnHighest([{ score: 100, country: "England" }], 4)).isEqualTo([]);
+  check(findHighestScoring([{ score: 100, country: "England" }], 4)).isEqualTo([]);
 });
 runTest(
   "Returns correct array of highest objects relative to array.length and num (e.g. num = 4 goes into 15 3 times, the 3 highest scoring objects must return)",
   function () {
     check(
-      returnHighest(
+      findHighestScoring(
         [
           { score: 100, country: "England" },
           { score: 15, country: "Scotland" },

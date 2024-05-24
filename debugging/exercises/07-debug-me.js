@@ -2,7 +2,7 @@ const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 // Fix the function below to pass the test!
 
-function harrisonsComparisons(money, product) {
+function checkIfHarrisonCanBuy(money, product) {
   const carBootPrices = {
     "Groovy-Chick Roller Skates": 4,
     "Broken Guitar": 6,
@@ -19,14 +19,14 @@ function harrisonsComparisons(money, product) {
 
 // Please do not change code below this line. You do not need to alter the tests or the test suite.
 
-runTest("harrisonsComparisons returns the correct string", function () {
-  check(harrisonsComparisons(50, "Groovy-Chick Roller Skates")).isEqualTo(
+runTest("checkIfHarrisonCanBuy returns the correct string", function () {
+  check(checkIfHarrisonCanBuy(50, "Groovy-Chick Roller Skates")).isEqualTo(
     `Harrison can buy Groovy-Chick Roller Skates!`
   );
-  check(harrisonsComparisons(50, "Used Dentures")).isEqualTo(
+  check(checkIfHarrisonCanBuy(50, "Used Dentures")).isEqualTo(
     `Harrison can buy Used Dentures!`
   );
-  check(harrisonsComparisons(50, "Mysterious Box")).isEqualTo(
+  check(checkIfHarrisonCanBuy(50, "Mysterious Box")).isEqualTo(
     `Harrison can not buy Mysterious Box :(`
   );
 });
