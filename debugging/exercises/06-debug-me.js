@@ -1,26 +1,13 @@
-const { check, runTest, skipTest } = require("../../test-api/index");
+const { add } = require("../utils");
 
-// Fix the function below to pass the test!
-
-function addSnack(snack) {
-  const snacks = [
-    "Waggon Wheel",
-    "Doritos: Chilly Heat Wave",
-    "Haribos",
-    "Monster Munch",
-  ];
-  snacks.push(snacks);
-  return snacks;
+function sumHighScores(leaderBoard) {
+  const runningTotal = 0;
+  leaderBoard.forEach((player) => {
+    runningTotal = add(runningTotal, leaderBoard[player]);
+  });
+  return runningTotal;
 }
 
-// Please do not change code below this line. You do not need to alter the tests or the test suite.
+const scoreBoard = { David: 100, Ellie: 112, Rose: 14, Jim: 51 };
 
-runTest("Get addSnack to return an array with updated snacks", function () {
-  check(addSnack("Pistachios")).isEqualTo([
-    "Waggon Wheel",
-    "Doritos: Chilly Heat Wave",
-    "Haribos",
-    "Monster Munch",
-    "Pistachios",
-  ]);
-});
+sumHighScores(scoreBoard); // should return 277

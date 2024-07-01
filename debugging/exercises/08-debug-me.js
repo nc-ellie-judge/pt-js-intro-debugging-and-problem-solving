@@ -1,17 +1,7 @@
-const { check, runTest, skipTest } = require("../../test-api/index.js");
-
-// Fix the function below to pass the test!
-
 function returnLastDigit(num) {
-  const digitStr = String(num);
-  return digitStr[digitStr.length - 1];
+  return num[num.length - 1];
 }
 
-// Please do not change code below this line. You do not need to alter the tests or the test suite.
-
-runTest("Get returnLastDigit to return the correct number", function () {
-  check(returnLastDigit(1001)).isEqualTo(1);
-  check(returnLastDigit(4598)).isEqualTo(8);
-  check(returnLastDigit(359579)).isEqualTo(9);
-  check(returnLastDigit(390)).isEqualTo(0);
-});
+returnLastDigit(1001); // should return 1
+returnLastDigit(4598); // should return 8
+returnLastDigit(359579); // should return 9

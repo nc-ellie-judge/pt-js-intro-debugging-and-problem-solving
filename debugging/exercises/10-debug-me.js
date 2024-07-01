@@ -1,21 +1,26 @@
-const { check, runTest, skipTest } = require("../../test-api/index.js");
+function findKnownFlyers(superheroes) {
+  const knownFlyers = [];
 
-// Fix the function below to pass the test!
-
-function getFishName(fish) {
-  const fishTank = {
-    "Clown Fish": "Nemo",
-    "Blue Tang": "Dory",
-    "Great White Shark": "Bruce",
-    "Moorish Idol": "Gill",
-    "Sea Turtle": "Crush",
-  };
-
-  return tank[fish];
+  for (let i = 1; i < superheroes.length; i++) {
+    if (superheroes[i].ability === "flying" || superheroes[i].isAnonymous) {
+      knownFlyers.push(superheroes[i]);
+    }
+  }
+  return knownFlyers;
 }
 
-// Please do not change code below this line. You do not need to alter the tests or the test suite.
+const heroes = [
+  { name: "Ironman", ability: "flying", isAnonymous: false },
+  { name: "Spiderman", ability: "spidey-sense", isAnonymous: true },
+  { name: "Superman", ability: "flying", isAnonymous: true },
+  { name: "Batman", ability: "Has VERY low voice", isAnonymous: true },
+  { name: "Wonderwoman", ability: "flying", isAnonymous: false },
+  { name: "Shazam", ability: "flying", isAnonymous: true },
+];
+findKnownFlyers(heroes);
 
-runTest("Get getFishName to return the name of the given fish", function () {
-  check(getFishName("Clown Fish")).isEqualTo("Nemo");
-});
+//should return
+// [
+//   { name: "Ironman", ability: "flying", isAnonymous: false },
+//   { name: "Wonderwoman", ability: "flying", isAnonymous: false },
+// ];

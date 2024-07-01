@@ -1,18 +1,18 @@
-const { check, runTest, skipTest } = require("../../test-api/index.js");
+function calculateAverageAge(tutors) {
+  const total = tutors.reduce((tutor, sum) => {
+    return sum + tutor.age;
+  }, 0);
 
-// Fix the function below to pass the test!
+  const average = total / tutors.length;
 
-function addNumbers(num1, num2) {
-  return Number(num1 + num2);
+  return average;
 }
 
-// Please do not change code below this line. You do not need to alter the tests or the test suite.
+const tutors = [
+  { name: "David", age: 31 },
+  { name: "Ellie", age: 27 },
+  { name: "Jim", age: 41 },
+];
 
-runTest(
-  "Get addNumbers to return the sum of the 2 string numbers passed",
-  function () {
-    check(addNumbers("5", "6")).isEqualTo(11);
-    check(addNumbers("11", "9")).isEqualTo(20);
-    check(addNumbers("25", "26")).isEqualTo(51);
-  }
-);
+calculateAverageAge(tutors);
+// should equal 33
