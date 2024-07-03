@@ -1,7 +1,8 @@
 function getCatGreeting() {
-  return `Hello, I am a cat and my name is ${catName}`;
   const catName = "Pisică";
+  return `Hello, I am a cat and my name is ${catName}`;
+
 }
 
-getCatGreeting();
+console.log(getCatGreeting());
 // should return "Hello, I am a cat and my name is Pisică"

@@ -1,10 +1,9 @@
 function calculateAverageAge(tutors) {
-  const total = tutors.reduce((tutor, sum) => {
+  const total = tutors.reduce((sum, tutor) => {
     return sum + tutor.age;
   }, 0);
 
   const average = total / tutors.length;
-
   return average;
 }
 
@@ -14,5 +13,5 @@ const tutors = [
   { name: "Jim", age: 41 },
 ];
 
-calculateAverageAge(tutors);
+console.log(calculateAverageAge(tutors))
 // should equal 33

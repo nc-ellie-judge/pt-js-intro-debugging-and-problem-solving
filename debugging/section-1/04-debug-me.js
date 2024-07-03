@@ -5,8 +5,8 @@ function findMentorsFavouritePlant(mentor) {
     Lewis: "Cactus",
     Harrison: "Venus Fly Trap",
   };
-  return plants.mentor;
+  return plants[mentor]
 }
 
-findMentorsFavouritePlant("Rob"); // should return "Money Plant"
-findMentorsFavouritePlant("Lewis"); // should return "Cactus"
+console.log(findMentorsFavouritePlant("Rob")); // should return "Money Plant"
+console.log(findMentorsFavouritePlant("Lewis")); // should return "Cactus"

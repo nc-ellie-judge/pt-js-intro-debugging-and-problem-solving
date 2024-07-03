@@ -9,14 +9,14 @@ function checkIfHarrisonCanBuy(money, product) {
     "500 Piece, Rare Bottle Cap Collection": 1,
   };
 
-  if (subtract(carBootPrices[product], money) > 0) {
+  if (subtract(money, carBootPrices[product]) > 0) { // rearranged money and carbootprices to make more readable
     return `Harrison can buy ${product}!`;
   }
   return `Harrison can not buy ${product} :(`;
 }
 
-checkIfHarrisonCanBuy(50, "Groovy-Chick Roller Skates");
+console.log(checkIfHarrisonCanBuy(50, "Groovy-Chick Roller Skates"))
 // should return  "Harrison can buy Groovy-Chick Roller Skates!""
 
-checkIfHarrisonCanBuy(50, "Used Dentures");
+console.log(checkIfHarrisonCanBuy(50, "Used Dentures"))
 // should return "Harrison can not buy Used Dentures :("

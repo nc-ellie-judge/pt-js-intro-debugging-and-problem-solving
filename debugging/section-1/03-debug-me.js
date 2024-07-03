@@ -1,6 +1,6 @@
 function greetMentor(mentor) {
-  return "Hello" + Mentor + "!";
+  return "Hello" + " " + mentor + "!";
 }
 
-greetMentor("Ellie");
+console.log(greetMentor("Ellie"))
 // should return "Hello Ellie!"

@@ -1,10 +1,10 @@
 
 function sayHello() {
-  return "Hello  Students';
+  return "Hello  Students";
 }
 
 
 
 
-sayHello()
+console.log(sayHello())
 // should return "Hello Students"
