@@ -1,8 +1,12 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
-// The findHighestScoring function will take an array of objects and an integer as arguments. First, the function will sort the array based on the score properties in descending order. The function will then calculate how many objects will be returned in a new array, based on how many times num fits into the length of the initial array of objects argument.
+// The findHighestScoring function will take an array of objects and an integer as arguments.✅
+// First, the function will sort the array based on the score properties in descending order. ✅
+// The function will then calculate how many objects will be returned in a new array, based on how many 
+// times num fits into the length of the initial array of objects argument.
 
-//(e.g. When num is 4, num goes into the length of the input object (15) 3 times, so the function should return the 3 highest scoring objects).
+//(e.g. When num is 4, num goes into the length of the input object (15) 3 times, so the function should 
+// return the 3 highest scoring objects).
 
 /*For example findHighestScoring([
   { score: 100, country: "England" },
@@ -19,27 +23,18 @@ findHighestScoring([
   Would return [{ score: 100, country: "England" }]
 */
 
-//It is your job to fix it.
+// It is your job to fix it.
 
 function findHighestScoring(array, num) {
   if (num === 0) {
     return [];
   }
-
   array.sort((a, b) => {
     return b.score - a.score;
   });
 
-  let multipleOfNum = 1;
-  for (let i = 1; i <= array.length; i++) {
-    if (i % num === 0) {
-      multipleOfNum++;
-    }
-  }
-  const newArray = array.filter((object, index) => {
-    return index < multipleOfNum;
-  });
-  return newArray;
+  const multipleOfNum = (Math.floor(array.length / num));
+  return array.slice(0, multipleOfNum)
 }
 
 // Please do not change code below this line. You do not need to alter the tests or the test suite.

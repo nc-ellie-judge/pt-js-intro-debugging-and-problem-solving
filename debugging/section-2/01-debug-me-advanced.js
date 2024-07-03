@@ -1,8 +1,8 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 function shoutNames(names) {
-  const shoutedNames = names.forEach((name) => {
-    return word + "!";
+  const shoutedNames = names.map((name) => {
+    return name + "!";
   });
   return shoutedNames;
 }

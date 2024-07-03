@@ -1,7 +1,7 @@
 function sumArray(array) {
-  array.reduce((accumulator, currentValue) => {
+  return array.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
-  }, 1);
+  }, 0);
 }
 
 module.exports = { sumArray };
