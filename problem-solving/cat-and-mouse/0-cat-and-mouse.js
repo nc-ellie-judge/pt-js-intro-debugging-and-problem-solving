@@ -1,13 +1,18 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 function calculateJump(locations, jumpLength) {
-/*
-You will be given an array containing string representations of the locations of a cat and a mouse. 
-You will also be given a positive integer which represents how far the cat can jump.
-
-Your task is to calculate if the cat can jump far enough to catch the mouse. Each space "x" in the array expends 1 from the cat's movement.
-It does not matter if the cat is before or after the mouse in the array.
-*/
+  /*
+  You will be given an array containing string representations of the locations of a cat and a mouse. 
+  You will also be given a positive integer which represents how far the cat can jump.
+  
+  Your task is to calculate if the cat can jump far enough to catch the mouse. Each space "x" in the array 
+  expends 1 from the cat's movement.
+  It does not matter if the cat is before or after the mouse in the array.
+  */
+  const catIndex = locations.indexOf("cat")
+  const mouseIndex = locations.indexOf("mouse")
+  const distance = Math.abs(catIndex - mouseIndex)
+  return distance <= jumpLength
 }
 
 runTest(
@@ -19,7 +24,7 @@ runTest(
   }
 );
 
-skipTest(
+runTest(
   "cat fails to catch the mouse when jump length is smaller than distance",
   function () {
     check(calculateJump(["cat", "x", "mouse"], 1)).isEqualTo(false);
